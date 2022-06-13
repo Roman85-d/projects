@@ -1,0 +1,1 @@
+$("#demo01").animatedModal({color:'rgba(16,27,45,.75)'});

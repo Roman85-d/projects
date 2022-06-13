@@ -1,0 +1,437 @@
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat-bold-webfont.eot');
+    src: url('../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('../fonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('montserrat-light-webfont.eot');
+    src: url('montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('montserrat-light-webfont.woff2') format('woff2'),
+         url('montserrat-light-webfont.woff') format('woff'),
+         url('montserrat-light-webfont.ttf') format('truetype'),
+         url('montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'alegreya_sansregular';
+    src: url('../fonts/alegreyasans-regular-webfont.eot');
+    src: url('../fonts/alegreyasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/alegreyasans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/alegreyasans-regular-webfont.woff') format('woff'),
+         url('../fonts/alegreyasans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/alegreyasans-regular-webfont.svg#alegreya_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+    font-size: 16px;
+    background-color: rgb(0, 0, 0);
+  
+}
+
+h1{
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-family: 'montserratbold', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+h2{
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    font-family: 'montserratlight', sans-serif;
+    letter-spacing: 1px;
+   
+
+}
+
+h3{
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    font-family: 'montserratlight', sans-serif;
+    letter-spacing: 1px;
+   
+
+}
+
+p{
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-family: 'alegreya_sansregular', sans-serif;
+    letter-spacing: 1px; 
+     
+}
+
+.err{
+    color: red;
+  font-size: 1rem;
+  font-weight: bold;
+    margin: 10px 0;
+
+}
+.err ul{
+    padding-left: 0; 
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.err li{
+    list-style: none;    
+}
+
+.logo-menu{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo-menu div{
+    width: 50%;
+}
+
+.sm-mint a{
+    color: rgb(255, 255, 255);
+    font-size: .8rem;
+    font-family: 'alegreya_sansregular',sans-serif;
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 1s;
+
+}
+
+.sm-mint a:hover{
+    color: rgb(0, 191, 255);
+}
+
+.info a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'alegreya_sansregular',sans-serif;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.info a:hover{
+    color: rgb(0, 191, 255);    
+}
+
+video{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.describ{
+    background-image: url('../images/fon_14.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 40px;
+    text-align: center;
+    
+}
+
+.nowim-txt{
+    background-image: linear-gradient(to right, rgb(3,7,10), rgb(20,41,70), rgb(4,7,24));
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.describ h2, .now h2{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.imagtxt{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.ntxt{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+
+.imagt{
+    width: 30%;
+}
+
+.imagt h3{
+    width: 80%;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+
+.imagt p{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.nowt{
+    width: 30%;
+    background-color: rgb(18, 35, 51);
+    padding-top: 20px;
+    transition-property: all;
+    transition-duration: .5s;
+
+}
+
+.nowt h3{
+    width: 80%;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+
+.nowt p{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.nowt:hover{
+    transform: translateY(-10px);
+
+}
+
+.btt{
+    
+    background-color: rgb(53, 102, 148);
+    padding: 15px 25px;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-family: 'montserratlight', sans-serif;
+    font-size: 1.2rem;
+    margin: 20px 0;
+
+         
+}
+
+#particles-js{
+    background-image: url('../images/mash_7.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    
+}
+
+.mash{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 40%;
+}
+
+.mash h1{
+    text-transform: uppercase;
+} 
+
+.mash p{
+   
+    font-size: 1.4rem;
+} 
+
+.modify{
+    background-image: url('../images/nfsphot1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center; 
+    height: 500px;
+    position: relative;  
+}
+
+.mod{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+}
+
+.mod p{
+    font-size: 1.4rem;
+    
+}
+
+.video-content{
+    position: relative;
+}
+
+.control{
+text-align: center;
+width: 40%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.control p{
+    font-size: 1.4rem;
+}
+
+.modal-content{
+    width: 30%;
+    background-color: rgb(18, 35, 51);
+    margin: 120px auto 0 auto;
+    border: #262428 double thick;
+    border-radius: 7px;
+    padding: 20px 0 20px 0;
+}
+
+.modal-content h2{
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+   
+
+}
+
+.head{
+    text-align: center;
+}
+
+.lab,.inp{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+
+.inp input{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(45, 65, 83);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+
+.lab label{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'montserratbold', sans-serif;
+}
+
+.butt {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.butt input{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(53, 102, 148);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 16px;
+}
+
+footer{
+    background-color: rgb(8, 27, 39);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    align-items: center;
+  }
+  
+  footer p{
+    font-size: .7rem;
+  }
+  
+  .info{
+    display: flex;
+    justify-content: space-around;
+    
+    
+  }
+  .info div{
+   width: 20%;
+   padding-left: 10px;
+}
+  
+  footer div{
+    width: 45%;
+  }
+
+  .cop{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(231, 22, 22);
+  }
+
+  .cop p:nth-child(1){
+      width: 10%;
+      background-color: blueviolet;
+  }
+
+  .cop p:nth-child(2){
+    width: 80%;
+    background-color: cornflowerblue;
+}
+
+.imagt img, .nowt img{width: 100%;}
+
+
+@media(max-width: 768px){
+    .logo{text-align: center;}
+    .logo-menu{
+        flex-wrap: wrap;
+    }
+
+    .logo-menu div{
+        width: 100%;
+       
+    }
+
+    .btt{
+    
+        background-color: rgb(83, 25, 177);
+        padding: 10px 20px;
+        color: rgb(255, 255, 255);
+        border: none;
+        font-family: 'montserratlight', sans-serif;
+        font-size: 1rem;
+        margin: 20px 0;
+}
+
+h1{font-size: 2rem; }
+h2{font-size: 1.2rem; }
+h3{font-size: .9rem; }
+
+    footer{
+        flex-wrap: wrap;
+    }
+
+    footer div{width: 100%; text-align: center;}
+    .cop{flex-wrap: wrap;}
+    .cop div{width: 100%;}
+    #main-menu li{text-align: center;}
+}
+
+ 

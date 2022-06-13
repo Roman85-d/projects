@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Need for Speed</title>
+    <link rel="shortcut icon" href="images/oct.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/sm-core-css.css">
+    <link rel="stylesheet" href="css/sm-mint.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery/jquery-3.6.0.js"></script>
+    <script src="js/jquery.smartmenus.js"></script>
+    <script src="js/alive-image.js"></script>
+    <script src="js/play_video.js"></script>
+    <script src="js/vue.min.js"></script>
+    
+</head>
+<body>
+
+<div id="animatedModal">
+        
+        <div  id="btn-close-modal" class="close-animatedModal"> 
+           <img src="images/close.png" alt="cl">
+        </div>
+            
+        <div class="modal-content">
+            <form id="entrance" @submit="checkForm" action="action.php" method="post">
+                <div class="head">
+                <h2>Подписаться на новости</h2>
+                <img src="images/subscribe.png" alt="user">
+                </div>
+                <div class="lab">
+                    <label for="name">Имя</label>
+                </div>
+                <div class="inp">
+                    <input type="text" name="name" id="name" placeholder="Введите имя" v-model="namef">
+                </div>
+                <div class="err" v-if="errors_name">
+                <ul>
+                <li v-for="error in errors_name"><span>{{ error }}</span></li>
+                </ul>
+                </div>
+               <div class="lab">
+                    <label for="email">Электронная почта</label>
+                </div>
+                <div class="inp">
+                    <input type="text" name="email" id="email" placeholder="Введите адрес эл.почты" v-model="emailf"> 
+                </div>
+                <div class="err" v-if="errors_email">
+                    <ul>
+                    <li v-for="error in errors_email"><span>{{ error }}</span></li>
+                    </ul>
+                    </div>
+                <div class="butt">
+                    <input type="submit" value="Подписаться">
+                    </div>
+            </form>
+        </div>
+    </div>
+
+<header>
+        <div class="logo-menu">
+            <div class="logo"><img src="images/logo.gif" alt="logo"></div>
+            <div class="menu">
+                <nav id="main-nav">
+                    <ul id="main-menu" class="sm sm-mint">
+                        <li><a href="#">Информация</a></li>
+                        <li><a href="#">Обои</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a id="demo01" href="#animatedModal">Подписка</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+<div class="video-content">
+    <div class="control">
+        <img src="images/nfs-logo.png" alt="log">
+        <p>Устраивайте гонки днем, ставьте на кон все ночью</p>
+        <p><button id="play" class="btt">Смотреть трейлер</button></p>
+    </div>
+        <video loop poster = "images/poster.jpg"  id="trailer">
+            <source src="video/nfs-trailer1.mp4" type="video/mp4">
+        </video>
+</div>
+<div class="describ" >
+    <h1>Долой ограничения</h1>
+    <h2>Need for Speed - захватывающая дух игра об уличных гонках, где закон меняется с заходом солнца</h2>
+    <p><button class="btt">Узнать больше</button></p>
+    <div class="imagtxt">
+        <div class="imagt" data-aos="zoom-in">
+            <div><img src="images/shapl_1.jpg" alt="sh1"></div>
+            <div>
+                <h3>В погоне за тьмой</h3>
+                <p>Окунитесь в жизнь ночного города и заработайте себе репутацию за участие в нелегальных уличных гонках.</p>
+            </div>
+        </div>
+        <div class="imagt" data-aos="zoom-in">
+            <div><img src="images/shapl_2.jpg" alt="sh2"></div>
+            <div>
+                <h3>Свобода самовыражения</h3>
+                <p>Модифицируйте и изменяйте свой автопарк и персонажа, чтобы выделиться из толпы. Будьте уникальными - пусть все узнают вас с первого взгляда.</p>
+            </div>
+        </div>
+        <div class="imagt" data-aos="zoom-in">
+            <div><img src="images/shapl_3.jpg" alt="sh3"></div>
+            <div>
+                <h3>Покорите трассу</h3>
+                <p>Чтобы привлечь внимание полицейских, патрулирующих Палм-Сити днем, вам придется постараться. Но с наступлением ночи правила меняются: на охоту выходит спецгруппа беспринципных копов, которые не прочь забрать вашу машину себе.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="particles-js">
+    <div class="mash">
+            <h1>Машины</h1> 
+            <p>Полный список автомобилей мечты, каждый из которых можно модифицировать и тюнинговать. Выжмите из своей тачки максимум!</p> 
+            <p><button class="btt">В гараж</button></p>
+    </div>
+        </div>
+
+        <div class="nowim-txt" >
+            <h1>Последние новости</h1>
+            <div class="ntxt">
+                <div class="nowt">
+                    <div><img id="im1" src="images/giphy1.jpg" alt="gp1"></div>
+                    <div>
+                        <h3>Need for Speed в библиотеке The Valut</h3>
+                        <p>Пять причин посетить рай для уличных гонщиков с EA Access и Origin Access Basic.</p>
+                    </div>
+                </div>
+                <div class="nowt" >
+                    <div><img id="im2" src="images/giphy2.jpg" alt="gp2"></div>
+                    <div>
+                        <h3>Устремляясь в будущее: Need for Speed и Criterion</h3>
+                        <p>В Need for Speed появился режим Cross-Play, а компания Criterion уже работает над следующей игрой серии.</p>
+                    </div>
+                </div>
+                <div class="nowt" >
+                    <div><img id="im3" src="images/giphy3.jpg" alt="gp3"></div>
+                    <div>
+                        <h3>Need for Speed - новые машины с 10 марта</h3>
+                        <p>Доставка с черного рынка скоро порадует вас Aston Martin DB11 Volante (2018), McLaren F1 (1993), а также новыми испытаниями и наградами.</p>
+                    </div>
+                </div>
+            </div>
+            <p><button class="btt">Еще новости</button></p>
+        </div>
+
+<div class="modify">
+    <div class="mod">
+        <h1>Need for Speed Studio</h1> 
+            <p>Модифицируйте свои автомобили в приложении Need for Speed Studio и скорее садитесь за руль в игре</p> 
+            <p><button class="btt">Модифицировать</button></p>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    
+    <div class="cop"><div><img src="images/oct.png" alt="ot"></div><div><span class="icon-copyright"></span>Electronic Arts Inc</div></div>
+    <div class="info">
+        <div><p><a href="#">Главная</a></p></div>
+        <div><p><a href="#">Информация</a></p></div>
+        <div><p><a href="#">Новости</a></p></div>
+        <div><p><a href="#">Медиа</a></p></div>
+        </div>
+    </footer>
+
+<script src="js/aos.js"></script>
+<script>AOS.init();</script>
+<script src="js/play_video.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<script src="js/animatedModal.js"></script>
+<script src="js/modal.js"></script>
+<script>
+new Vue({
+    el : "#entrance",
+    data : {namef : null, emailf : null,  errors_name: [], errors_email: []},
+    methods : {checkForm: function (e){
+        this.errors_name = [];
+        this.errors_email = [];
+        if (!this.namef) {this.errors_name.push('Укажите имя');}
+		else if (!this.validName(this.namef)) {this.errors_name.push('Ошибка указания имени');}
+        if (!this.emailf) {this.errors_email.push('Укажите адрес электронной почты');}
+		else if (!this.validEmail(this.emailf)) {this.errors_email.push('Укажите корректный адрес электронной почты');}
+        if (!this.errors_name.length && !this.errors_email.length) {return true;}
+		e.preventDefault();
+    },
+    validName: function (namef) {
+      	var re1 = /^[А-Яа-я]/gi;
+      	return re1.test(namef);
+			},
+    validEmail: function (emailf) {
+      	var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      	return re.test(emailf);
+    }
+}
+});
+</script>
+</body>
+</html>
